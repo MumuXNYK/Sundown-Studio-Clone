@@ -1,0 +1,794 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    height: 100%;
+    width: 100%;
+    overflow-x:hidden;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#pg1{
+    background-color: #EFEAE3;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0px 3vw;
+}
+/*------------------------------- navbar---------------------- */
+nav{
+    padding: 2vw 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.nav-options{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-options h4 {
+    padding: 10px 20px;
+    border: 1px solid rgba(11, 11, 11, 0.349);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 18p  x;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.3s;
+}
+
+.nav-options h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    transition: all ease 0.3s;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+}
+
+.nav-options h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-options h4 a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.826);
+    position: relative;
+    z-index: 2;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+}
+
+.nav-options h4:hover a {
+    color: #fff;
+}
+/*================= pg content-------- */
+#center {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 3vw;
+    font-family: "Neuehaasdisplay mediu",sans-serif;
+    color: #0b0500;
+}
+#left p{
+    width: 30vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    font-weight: bold;
+}
+#right h1{
+    font-size: 10vw;
+    line-height: .8;
+    text-align: right;
+    padding-right: 30px;
+}
+
+#pg1 video {
+    position: relative;
+    z-index: 10;
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 5vw;
+}
+
+#hero {
+    position: absolute;
+    width: 54em;
+    height: 58em;
+    right: 0;
+    top: 35em;
+    left: auto;
+    bottom: auto;
+}
+
+.hero1{
+    z-index: 3;
+    position: absolute;
+    background-color: #fe320a;
+    height: 36em;
+    width: 36em;
+    border-radius: 50%;
+    filter: blur(15px);
+    top: 8em;
+    left: 15em;
+    right: auto;
+    bottom: auto;
+    mix-blend-mode: normal;
+}
+
+.hero2{
+    z-index: 2;
+    position: absolute;
+    background-color: #fe320a;
+    width: 35em;
+    height: 35em;
+    border-radius: 50%;
+    filter: blur(20px);
+    top: 4em;
+    left: 8.5em;
+    mix-blend-mode: normal;
+    animation-name: anime2 ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.hero3{
+    z-index: 3;
+    position: absolute;
+    background-color: #fe330a00;
+    background-image: linear-gradient(219deg,#ff9831,#fe330a 73%);
+    filter: blur(20px);
+    width: 50em;
+    height: 36em;
+    border-bottom-left-radius:50% ;
+    border-top-left-radius:50% ;
+    top: 20px;
+    right: -25%;
+    left: auto;
+    bottom: auto;
+    transform: rotate(72deg);
+    mix-blend-mode: normal;
+    animation-name: anime1 ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+    from{
+        transform: rotateZ(0deg) scale3d(1,1,1) ;
+    }
+    to{
+        transform: rotateZ(35deg) scale3d(1,1,1);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate3d(-4%,4%,0px) scale3d(1,1,1) translate(5%,-15%) ;
+    }
+    to{
+        transform: translate3d(2%,-1%,0px) scale3d(1,1,1) translate(-10%,15%);
+    }
+}
+/* ---------------------------page 1 end--------------------- */
+
+#pg2 {
+    background-color: #EFEAE3;
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 0px;
+    position: relative;
+}
+
+.moving-line{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.moving-line::-webkit-scrollbar {
+    display: none;
+}
+
+.content h1 {
+    font-size: 9vw;
+    display: inline-block;
+}
+
+.content {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: moving;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#ball{
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: #fe320a;
+    margin: 1vw 2vw;
+}
+
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.pg2-bottom{
+    height: 80vh;
+    width: 100%;
+    padding: 5vw;
+    padding-right: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+.pg2-bottom h1 {
+    font-size: 4em;
+    line-height: 1;
+    width: 65%;
+    font-family: "Neuehaasdisplay mediu",sans-serif;
+}
+
+.bottom2{
+    width: 20%;
+}
+
+.bottom2 img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20vw;
+}
+
+.bottom2 p {
+    margin-top: 3em;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#pg2 .gui {
+    height: 100%;
+    width: 100%;
+    max-height: 42em;
+    max-width: 42em;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    overflow: visible;
+}
+
+.gui1 {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    max-width: 34rem;
+    max-height: 34rem;
+    filter: blur(60px);
+    border-radius: 50%;
+    background-color: #fe330a;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 4em;
+    left: 4em;
+    bottom: auto;
+    right: auto;
+    animation: gui1 3s linear infinite alternate;
+}
+
+@keyframes gui1 {
+    from{
+        transform: scale3d(1,1,1) translate(-6%,7%);
+    }
+    to{
+        transform: scale3d(1,1,1) translate(15%,-13%);
+    }
+}
+
+.gui2{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 32rem;
+    max-height: 32rem;
+    background-color: #ff9831;
+    filter: blur(10px);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 3em;
+    right: 2em;
+    bottom: auto;
+    left: auto;
+    animation: gui2 3s ease-in-out infinite alternate;
+}
+
+@keyframes gui2 {
+    from{
+        transform: scale3d(1,1,1) translate(-7%,7%) rotateZ(0) skew(0,0);
+    }
+    to{
+        transform: scale3d(1,1,1) translate(12%,-13%) rotateZ(90deg) skew(10deg,0);
+    }
+}
+
+/* pg2 end s =--------------------------------- */
+#pg3 {
+    background-color: #EFEAE3;
+    min-height: 100vh;
+    width: 100%;
+    padding: 4vw 0;
+}
+
+.head {
+    height: 50px;
+    width: 100%;
+    padding-left: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.ball1{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fe320a;
+}
+
+.head h4 {
+    padding-left: 5px;
+    letter-spacing: 0.1rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+}
+
+.elem {
+    height: 140px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0px 2vw;
+    border-bottom: 1px solid #0000001b;
+    cursor: pointer;
+}
+
+.elem h2 {
+     font-size: 3.25em;
+     letter-spacing: -.03em;
+     position: relative;
+     z-index: 9;
+     font-family: "Neuehaasdisplay mediu",sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #ff9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+/* fixed */
+#fixed {
+    height: 30vw;
+    width: 23vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    z-index: 99;
+    display: none;
+}
+
+.info {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+   
+}
+
+.info h5 {
+    letter-spacing: .02em;
+    font-size: .875em;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+}
+
+.info h6 {
+    font-size: .875rem;
+    line-height: 1.3;
+    font-weight: 400;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    margin-left: 3vw;
+    margin-top: 3vw;
+}
+
+.btn span {
+    padding-left: 10px;
+}
+/* pg 3 end ------------------ */
+
+#pg4{
+    background-color: #EFEAE3;
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 2vw;
+}
+
+.wrapper {
+    position: relative;
+    margin-left: 2vw;
+    margin: 0 auto;
+    height: 100vh;
+    width: 95vw;
+    background-color: #0b0500;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.one{
+    width: 45%;
+    padding: 10vw;
+}
+
+.heads{
+    margin-bottom: 3vw;
+    cursor: pointer;
+}
+
+.heads h1 {
+    font-family: "Neuehaasdisplay mediu",sans-serif;
+    font-size: 4.25em;
+    font-weight: 500;
+    line-height: 1;
+    opacity: .3;
+    color: #EFEAE3;
+    border-bottom: 1.5px transparent;
+    border-left: 3px solid rgba(239,234,227,.8);
+    padding-left: 15px;
+    transition: all 1s ease-out;
+}
+
+.heads .active {
+    color: #efeae3;
+    opacity: 100;
+    border-left:3px solid red;
+}
+
+.one p {
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #EFEAE3;
+}
+
+.two{
+    width: 55%;
+    height: 100%;
+    position: relative;
+}
+
+.img-cont  {
+    background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: all 1s ease;
+}
+/* pg-4 end ----------------------------------- */
+
+#pg5{
+    background-color: #EFEAE3;
+    height: 80vh;
+    width: 100%;
+    padding: 6vw 2vw;
+}
+
+.head{
+    margin-bottom: 2vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 70%;
+    padding-left: 4vw;
+  }
+
+  .swiper-slide {
+    border-left: 1px solid #4a494933;
+    width: 30%;
+    padding: 2vw ;
+  }
+
+  .swiper-slide img {
+    margin-bottom: 3vw;
+  }
+  
+  .swiper-slide p {
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: 400;
+    width:  80%;
+  }
+/* page5 end---------------------------- */
+#footer{
+    position: sticky;
+    z-index: 9;
+    bottom: 0;
+    height: 90vh;
+    width: 100%;
+    background-color: #0b0500;
+    color: #EFEAE3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2vw 3vw;
+}
+
+.rela {
+    position: relative;
+}
+
+.ftop{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h1s{
+    padding-left: 5vw;
+}
+
+.inp{
+    width: 25%;
+}
+
+.inp h2 {
+    font-size: 1.25em;
+    line-height: 1.3;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    font-weight: 400;
+}
+
+.email{
+    margin-top: 3vw;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #dadada;
+    position: relative;
+}
+ 
+.input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.input1 {
+    position: absolute;
+    right: -10px;
+    bottom: 12px;
+    width: 5rem;
+    height: 1rem;
+    background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c5_Form%20Button.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    color: transparent;
+}
+
+ input::placeholder {
+    font-size: 1.25rem;
+}
+
+form span {
+    font-size: 2rem;
+
+}
+
+.fbottom{
+    margin-top: 3vw;
+    border-top: 1px solid #dadada55;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fbottom p {
+    margin-bottom: 0;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.flocation{
+    display: flex;
+}
+
+.flocation img {
+    margin-right: 10px;
+}
+
+.fsocial a{
+    text-decoration: none;
+    color: #EFEAE3;
+    font-family: "Neuehaasdisplay roman",sans-serif;
+    padding-bottom: 5px;
+}
+
+.fsocial a:hover {
+    border-bottom: 3px solid #dadada;
+}
+
+.logo-wrapper {
+    width: 100%;
+    margin-top: 6.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.anim {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #fe320a;
+}
+
+.anim1{
+    z-index: -1;
+    width: 70vw;
+    height: 35vw;
+    filter: blur(60px);
+    background-color: #ff9831;
+    background-image: linear-gradient(152deg,#ff9831,#fe330a 43%);
+    border-radius:50%;
+    position: absolute;
+    left: -19vw;
+    top: -19vw;
+    bottom: auto;
+    right: auto;
+    transform: rotate(-13deg);
+    animation: footanim1 3s linear infinite alternate;
+}
+
+.anim2{
+    z-index: -1;
+    width: 110vw;
+    height: 45vw;
+    filter: blur(60px);
+    background-color: #ff9831;
+    background-image: linear-gradient(17deg,#fe330a 45%,#ff9831);
+    border-radius:50%;
+    position: absolute;
+    left: auto;
+    top: -40vw;
+    bottom: auto;
+    right: -30vw;
+    transform: rotate(42deg);
+    animation: footanim2 3s linear infinite alternate;
+}
+
+.anim3 {
+    z-index: -1;
+    width: 80vw;
+    height: 30vw;
+    filter: blur(40px);
+    background-color: #fe330a;
+    mix-blend-mode: normal;
+    position: absolute;
+    left: auto;
+    top: -20vw;
+    bottom: auto;
+    right:30vw;
+    transform: rotate(98deg);
+    animation: footanim3 5s linear infinite alternate;
+}
+
+@keyframes footanim1 {
+    from{
+        transform: scale3d(1,1,1) rotateZ(-8deg);
+    }
+    to{
+        transform: scale3d(1.2,1.2,1.2) rotateZ(-25deg);
+    }
+}
+
+@keyframes footanim2{
+    from{
+        transform: scale3d(1,1,1) rotateZ(-125deg);
+    }
+    to{
+        transform: scale3d(1.2,1.2,1.2) rotateZ(-156deg);
+    }
+}
+
+@keyframes footanim3{
+    from{
+        transform: scale3d(1,1,1) translate(5%,2%) rotateZ(5deg);
+    }
+    to{
+        transform: scale3d(1.2,1.2,1.2) translate(20%,9%) rotateZ(5deg);
+    }
+}
