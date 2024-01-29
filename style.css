@@ -10,16 +10,16 @@ html , body {
 }
 
 #main{
+    background-color: #EFEAE3;
     position: relative;
     z-index: 10;
 }
 
 #pg1{
-    background-color: #EFEAE3;
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding: 0px 3vw;
+    padding: 0px 5vw;
 }
 /*------------------------------- navbar---------------------- */
 nav{
@@ -29,6 +29,11 @@ nav{
     align-items: center;
     position: relative;
     justify-content: space-between;
+    z-index: 100;
+}
+
+nav img {
+    width: 18vh;
 }
 
 .nav-options{
@@ -42,7 +47,7 @@ nav{
     border: 1px solid rgba(11, 11, 11, 0.349);
     border-radius: 50px;
     font-weight: 500;
-    font-size: 18p  x;
+    font-size: 1.1vw;
     position: relative;
     overflow: hidden;
     transition: all ease 0.3s;
@@ -63,6 +68,10 @@ nav{
 .nav-options h4:hover::after {
     bottom: 0;
     border-radius: 0;
+}
+
+nav h3 {
+    display: none;
 }
 
 .nav-options h4 a{
@@ -98,7 +107,7 @@ nav{
     font-size: 10vw;
     line-height: .8;
     text-align: right;
-    padding-right: 30px;
+    padding-right:3vw;
 }
 
 #pg1 video {
@@ -111,10 +120,10 @@ nav{
 
 #hero {
     position: absolute;
-    width: 54em;
-    height: 58em;
+    width: 54vw;
+    height: 58vw;
     right: 0;
-    top: 35em;
+    top: 37vw;
     left: auto;
     bottom: auto;
 }
@@ -123,12 +132,12 @@ nav{
     z-index: 3;
     position: absolute;
     background-color: #fe320a;
-    height: 36em;
-    width: 36em;
+    height: 36vw;
+    width: 36vw;
     border-radius: 50%;
     filter: blur(15px);
-    top: 8em;
-    left: 15em;
+    top: 8vw;
+    left: 15vw;
     right: auto;
     bottom: auto;
     mix-blend-mode: normal;
@@ -138,12 +147,12 @@ nav{
     z-index: 2;
     position: absolute;
     background-color: #fe320a;
-    width: 35em;
-    height: 35em;
+    width: 50vw;
+    height: 50vw;
     border-radius: 50%;
     filter: blur(20px);
-    top: 4em;
-    left: 8.5em;
+    top: 4vw;
+    left: 8.5vw;
     mix-blend-mode: normal;
     animation-name: anime2 ;
     animation-duration: 3s;
@@ -158,11 +167,11 @@ nav{
     background-color: #fe330a00;
     background-image: linear-gradient(219deg,#ff9831,#fe330a 73%);
     filter: blur(20px);
-    width: 50em;
-    height: 36em;
+    width: 80vw;
+    height: 50vw;
     border-bottom-left-radius:50% ;
     border-top-left-radius:50% ;
-    top: 20px;
+    top: 2vw;
     right: -25%;
     left: auto;
     bottom: auto;
@@ -177,10 +186,10 @@ nav{
 
 @keyframes anime1 {
     from{
-        transform: rotateZ(0deg) scale3d(1,1,1) ;
+        transform: rotateZ(0deg) scale3d(1,1,1) skew(0deg,0) ;
     }
     to{
-        transform: rotateZ(35deg) scale3d(1,1,1);
+        transform: rotateZ(35deg) scale3d(1.2,1.2,1.2) skew(-5deg,-5deg);
     }
 }
 
@@ -195,7 +204,6 @@ nav{
 /* ---------------------------page 1 end--------------------- */
 
 #pg2 {
-    background-color: #EFEAE3;
     min-height: 100vh;
     width: 100%;
     padding: 5vw 0px;
@@ -226,8 +234,8 @@ nav{
 }
 
 #ball{
-    height: 70px;
-    width: 70px;
+    height: 5vw;
+    width: 5vw;
     border-radius: 100%;
     display: inline-block;
     background-color: #fe320a;
@@ -256,7 +264,7 @@ nav{
 }
 
 .pg2-bottom h1 {
-    font-size: 4em;
+    font-size: 4vw;
     line-height: 1;
     width: 65%;
     font-family: "Neuehaasdisplay mediu",sans-serif;
@@ -276,15 +284,15 @@ nav{
     margin-top: 3em;
     font-family: "Neuehaasdisplay roman",sans-serif;
     line-height: 1.4;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 400;
 }
 
 #pg2 .gui {
     height: 100%;
     width: 100%;
-    max-height: 42em;
-    max-width: 42em;
+    height: 42vw;
+    width: 42vw;
     position: absolute;
     top: 50%;
     left: 20%;
@@ -295,9 +303,9 @@ nav{
     z-index: 2;
     height: 100%;
     width: 100%;
-    max-width: 34rem;
-    max-height: 34rem;
-    filter: blur(60px);
+    width: 34vw;
+    height: 34vw;
+    filter: blur(50px);
     border-radius: 50%;
     background-color: #fe330a;
     justify-content: center;
@@ -305,8 +313,8 @@ nav{
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    top: 4em;
-    left: 4em;
+    top: 4vw;
+    left: 4vw;
     bottom: auto;
     right: auto;
     animation: gui1 3s linear infinite alternate;
@@ -314,10 +322,10 @@ nav{
 
 @keyframes gui1 {
     from{
-        transform: scale3d(1,1,1) translate(-6%,7%);
+        transform: scale3d(1,1,1) translate(-3%,2%);
     }
     to{
-        transform: scale3d(1,1,1) translate(15%,-13%);
+        transform: scale3d(1.2,1.2,1.2) translate(5%,-3%);
     }
 }
 
@@ -325,16 +333,16 @@ nav{
     z-index: 1;
     height: 100%;
     width: 100%;
-    max-width: 32rem;
-    max-height: 32rem;
+    width: 32vw;
+    height: 32vw;
     background-color: #ff9831;
     filter: blur(10px);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    top: 3em;
-    right: 2em;
+    top: 3vw;
+    right: 2vw;
     bottom: auto;
     left: auto;
     animation: gui2 3s ease-in-out infinite alternate;
@@ -345,20 +353,19 @@ nav{
         transform: scale3d(1,1,1) translate(-7%,7%) rotateZ(0) skew(0,0);
     }
     to{
-        transform: scale3d(1,1,1) translate(12%,-13%) rotateZ(90deg) skew(10deg,0);
+        transform: scale3d(1.3,1.3,1.3) translate(12%,-13%) rotateZ(90deg) skew(10deg,0);
     }
 }
 
 /* pg2 end s =--------------------------------- */
 #pg3 {
-    background-color: #EFEAE3;
     min-height: 100vh;
     width: 100%;
     padding: 4vw 0;
 }
 
 .head {
-    height: 50px;
+    height: 5vw;
     width: 100%;
     padding-left: 2vw;
     display: flex;
@@ -366,8 +373,8 @@ nav{
 }
 
 .ball1{
-    height: 10px;
-    width: 10px;
+    height: 1vw;
+    width: 1vw;
     border-radius: 50%;
     background-color: #fe320a;
 }
@@ -375,14 +382,14 @@ nav{
 .head h4 {
     padding-left: 5px;
     letter-spacing: 0.1rem;
-    font-size: .875rem;
+    font-size: 1vw;
     font-weight: 400;
     line-height: 1.2;
     font-family: "Neuehaasdisplay roman",sans-serif;
 }
 
 .elem {
-    height: 140px;
+    height: 8vw;
     width: 100%;
     position: relative;
     display: flex;
@@ -394,8 +401,8 @@ nav{
 }
 
 .elem h2 {
-     font-size: 3.25em;
-     letter-spacing: -.03em;
+     font-size: 3.25vw;
+     letter-spacing: -.03vw;
      position: relative;
      z-index: 9;
      font-family: "Neuehaasdisplay mediu",sans-serif;
@@ -432,20 +439,20 @@ nav{
 .info {
     text-align: right;
     position: absolute;
-    right: 20px;
+    right: 2vw;
    
 }
 
 .info h5 {
-    letter-spacing: .02em;
-    font-size: .875em;
+    letter-spacing: .02vw;
+    font-size: 1vw;
     font-weight: 400;
     line-height: 1.2;
     font-family: "Neuehaasdisplay roman",sans-serif;
 }
 
 .info h6 {
-    font-size: .875rem;
+    font-size: 1vw;
     line-height: 1.3;
     font-weight: 400;
     font-family: "Neuehaasdisplay roman",sans-serif;
@@ -458,12 +465,11 @@ nav{
 }
 
 .btn span {
-    padding-left: 10px;
+    padding-left: 1vw;
 }
 /* pg 3 end ------------------ */
 
 #pg4{
-    background-color: #EFEAE3;
     min-height: 100vh;
     width: 100%;
     padding: 5vw 2vw;
@@ -494,14 +500,14 @@ nav{
 
 .heads h1 {
     font-family: "Neuehaasdisplay mediu",sans-serif;
-    font-size: 4.25em;
+    font-size: 4.25vw;
     font-weight: 500;
     line-height: 1;
     opacity: .3;
     color: #EFEAE3;
     border-bottom: 1.5px transparent;
     border-left: 3px solid rgba(239,234,227,.8);
-    padding-left: 15px;
+    padding-left: 1vw;
     transition: all 1s ease-out;
 }
 
@@ -514,7 +520,7 @@ nav{
 .one p {
     font-family: "Neuehaasdisplay roman",sans-serif;
     line-height: 1.4;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 400;
     margin-bottom: 0;
     color: #EFEAE3;
@@ -541,7 +547,6 @@ nav{
 /* pg-4 end ----------------------------------- */
 
 #pg5{
-    background-color: #EFEAE3;
     height: 80vh;
     width: 100%;
     padding: 6vw 2vw;
@@ -570,12 +575,11 @@ nav{
   .swiper-slide p {
     font-family: "Neuehaasdisplay roman",sans-serif;
     line-height: 1.4;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 400;
     width:  80%;
   }
 /* page5 end---------------------------- */
-
 #pg6{
     height: 100vh;
     width: 100%;
@@ -609,6 +613,11 @@ nav{
 
 .h1s{
     padding-left: 5vw;
+    cursor: pointer;
+}
+
+.h1s h1:hover {
+    color: #efeae382;
 }
 
 .inp{
@@ -616,11 +625,14 @@ nav{
 }
 
 .inp h2 {
-    font-size: 1.25em;
+    font-size: 1.25vw;
     line-height: 1.3;
     font-family: "Neuehaasdisplay roman",sans-serif;
     font-weight: 400;
+    
 }
+
+
 
 .email{
     margin-top: 3vw;
@@ -657,6 +669,7 @@ nav{
 
  input::placeholder {
     font-size: 1.25rem;
+    color: #EFEAE3;
 }
 
 form span {
@@ -758,7 +771,7 @@ form span {
 .anim3 {
     z-index: -1;
     width: 80vw;
-    height: 30vw;
+    height: 20vw;
     filter: blur(40px);
     background-color: #fe330a;
     mix-blend-mode: normal;
@@ -794,6 +807,135 @@ form span {
         transform: scale3d(1,1,1) translate(5%,2%) rotateZ(5deg);
     }
     to{
-        transform: scale3d(1.2,1.2,1.2) translate(20%,9%) rotateZ(5deg);
+        transform: scale3d(1.2,1.2,1.2) translate(10%,9%) rotateZ(5deg);
     }
+}
+
+#fullscr {
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all 0.4s ease;
+}
+
+.fdiv1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
+@media (max-width:600px) {
+    #pg1{
+        padding: 0;
+    }
+    nav {
+        padding:3vw 5vw;
+        background-color: #EFEAE3;
+    }
+
+    nav img {
+        transition: all 0.2s ease;
+    }
+
+    .nav-options {
+        display: none;
+    }
+
+    nav h3{
+        display: block;
+        font-family: "Neuehaasdisplay roman",sans-serif;
+        padding: 2vw 4vw;
+        border: 1px solid rgba(11, 11, 11, 0.349);
+        border-radius: 50px;
+        font-size: 4vw;
+        font-weight: 400;
+        padding-left: 8vw;
+    }
+
+    #center{
+        height: 40vh;
+        position: relative;
+        flex-direction: column-reverse;
+        margin-top: 15vw;
+        padding: 2vw;
+    }
+
+    #left p{
+        width: 70%;
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+
+    #right h1{
+        font-size: 17vw;
+        line-height: .8;
+        text-align: right;
+    }
+
+    #pg1 video {
+        padding: 3vw;
+        object-fit: cover;
+        object-position: center;
+        height: 60vh;
+    }
+
+    #hero {
+        top: 45%;
+        width: 75vw;
+        height: 55vw;
+    }
+
+    .pg2-bottom {
+        height: 40vh;
+        margin-top: 8vw;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .pg2-bottom h1 {
+        font-size: 6.5vw;
+        width: 100%;
+    }
+
+    .bottom2{
+        width: 80%;
+    }
+
+    .bottom2 p{
+        width: 100%;
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+
+    #pg2{
+        margin-bottom: none;
+    }
+
+    #pg2 .gui {
+        height: 65vw;
+        width: 65vw;
+        top: 25%;
+        left: 30%;
+    }
+
+    .gui1{
+        height: 60vw;
+        width: 60vw;
+    }
+
+    .gui2{
+        height: 60vw;
+        width: 60vw;
+    }
+
+    #pg3{
+        margin-top: none;
+    }
+    
 }
