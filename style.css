@@ -5,6 +5,7 @@
 }
 
 html , body {
+    height: 100%;
     width: 100%;
     overflow-x:hidden;
 }
@@ -19,7 +20,7 @@ html , body {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding: 0px 5vw;
+    padding: 0px 3vw;
 }
 /*------------------------------- navbar---------------------- */
 nav{
@@ -399,7 +400,9 @@ nav h3 {
     border-bottom: 1px solid #0000001b;
     cursor: pointer;
 }
-
+.elemImg{
+    display: none;
+}
 .elem h2 {
      font-size: 3.25vw;
      letter-spacing: -.03vw;
@@ -440,6 +443,7 @@ nav h3 {
     text-align: right;
     position: absolute;
     right: 2vw;
+    top: 50px;
    
 }
 
@@ -580,13 +584,8 @@ nav h3 {
     width:  80%;
   }
 /* page5 end---------------------------- */
-#pg6{
-    height: 100vh;
-    width: 100%;
-}
-
 #footer{
-    position: fixed;
+    position: relative;
     z-index: 9;
     bottom: 0;
     height: 100vh;
@@ -632,8 +631,6 @@ nav h3 {
     
 }
 
-
-
 .email{
     margin-top: 3vw;
     width: 80%;
@@ -674,7 +671,6 @@ nav h3 {
 
 form span {
     font-size: 2rem;
-
 }
 
 .fbottom{
@@ -893,7 +889,7 @@ form span {
 
     .pg2-bottom {
         height: 40vh;
-        margin-top: 8vw;
+        padding-top: 8vw;
         flex-direction: column;
         align-items: start;
     }
@@ -901,6 +897,7 @@ form span {
     .pg2-bottom h1 {
         font-size: 6.5vw;
         width: 100%;
+        padding-top: 15vw;
     }
 
     .bottom2{
@@ -911,10 +908,6 @@ form span {
         width: 100%;
         font-size: 4vw;
         line-height: 5vw;
-    }
-
-    #pg2{
-        margin-bottom: none;
     }
 
     #pg2 .gui {
@@ -934,8 +927,167 @@ form span {
         width: 60vw;
     }
 
+    #pg2{
+        min-height: 100vh;
+    }
     #pg3{
-        margin-top: none;
+        min-height: 100vh;
+    }
+    .head{
+        height: 6vw;
+        padding-bottom: 5vw;
+    }
+
+    .ball1{
+        height: 3vw;
+        width: 3vw;
     }
     
+    .head h4{
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .elem {
+        position: relative;
+        flex-direction: column;
+        height: 60vh;
+        align-items: start;
+        width: 100vw;
+    }
+
+
+    .elem h2 {
+        font-size: 5vw;
+    }
+
+    .flex{
+        position: absolute;
+        bottom: 8vw;
+        left: 8vw;
+    }
+    .info {
+        text-align: left;
+        position: relative;
+        top: 1vh;
+        left: 0.5vw;
+    }
+    .elemImg {
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        height: 50vh;
+        width: 95vw;
+        padding: 3vw;
+        border-radius: 30px;
+    }
+
+    .info h5 {
+        font-size: 3vw;
+    }
+    .info h6 {
+        font-size: 3vw;
+    }
+    .overlay{
+        display: none;
+    }
+
+    .btn{
+        display: flex;
+        padding: 4vw 6vw;
+    }
+    .btn h4 {
+        font-size: 4vw;
+
+    }
+
+    .wrapper{
+        flex-direction: column;
+        height: 80vh;
+    }
+    .one{
+        width: 100%;
+        height: 50%;
+        padding-top: 5vw;
+    }
+    
+    .heads h1 {
+        font-size: 12vw;
+        align-items: start;
+    }
+
+    .one p {
+        width: 100%;
+        font-size: 4vw;
+        line-height: 5vw;
+        padding: 2vw;
+    }
+
+    .two{
+        height: 45%;
+        width: 100%;
+    }
+    #pg4{
+        min-height: 90vh;
+    }
+    #pg5{
+        height: 60vh;
+        padding: 0 8vw;
+    }
+    .swiper{
+        height: 45vh;
+    }
+
+    .swiper-slide {
+        width: 70%;
+        padding: 5vw 8vw;
+    }
+    .swiper-slide img {
+        margin-bottom: 3vw;
+        height: 25vw;
+      }
+      
+      .swiper-slide p {
+        line-height: 1.4;
+        font-size: 3.3vw;
+        font-weight: 200;
+        width:100%;
+      }
+
+     #footer{
+       height: 70vh;
+     }
+
+     .ftop{
+        flex-direction: column;
+        align-items: start;
+        height: 40vh;
+     }
+     .h1s h1{
+        font-size: 10vw;
+    }
+    
+     .inp{
+        padding: 15vw;
+        padding-left: 6vw;
+        width: 100%;
+     }
+
+     .inp h2 {
+        font-size: 4vw;
+        line-height: 1.4;
+        font-weight: 400;   
+     }
+     
+     input::placeholder {
+        font-size: 1rem;
+        color: #EFEAE3;
+    }
+
+    .email{
+        width: 100%;
+    }
+     .fbottom{
+        flex-direction: column;
+     }
 }

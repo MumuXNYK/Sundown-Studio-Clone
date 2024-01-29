@@ -10,6 +10,7 @@ elems.forEach(function(e){
     e.addEventListener('mouseenter', function(){
         fixed.style.display = 'block'
         var img = e.getAttribute('data-display');
+        console.log(img);
         fixed.style.backgroundImage = `url(${img})`
     })
     e.addEventListener('mouseleave',function(){
