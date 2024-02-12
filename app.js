@@ -1,7 +1,4 @@
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#main'),
-//     smooth: true
-// });
+
 
 var fixed = document.getElementById('fixed')
 var elems = document.querySelectorAll('.elem')
@@ -60,8 +57,14 @@ menu.addEventListener('click',()=>{
         flag = 1
         
     } else {
-        full.style.top = "-100%"
+        full.style.top = "-120%"
         navimg.style.opacity = 1
         flag = 0
     }
 })
+
+
+var loader = document.querySelector('.loader')
+ setTimeout(() => {
+    loader.style.top =  '-100%'
+ }, 3800);
